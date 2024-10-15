@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Videospelare med Vidstack</title>
-    <link rel="stylesheet" href="https://cdn.vidstack.io/v1.0.0/vidstack.min.css">
+    <link rel="stylesheet" href="https://cdn.vidstack.io/player/theme.css" />
+    <link rel="stylesheet" href="https://cdn.vidstack.io/player/video.css" />
 </head>
 <body>
 
     <h1>Videospelare med YouTube och Vimeo</h1>
 
-    <!-- YouTube Video -->
-    <vds-player id="youtube-player" controls>
-        <vds-media>
-            <vds-source src="dQw4w9WgXcQ" type="video/youtube"></vds-source> <!-- Använd bara video-ID här -->
-        </vds-media>
-    </vds-player>
+   <script type="module">
+  import { VidstackPlayer, VidstackPlayerLayout } from 'https://cdn.vidstack.io/player';
 
-    <!-- Vimeo Video -->
-    <vds-player id="vimeo-player" controls>
-        <vds-media>
-            <vds-source src="123456789" type="video/vimeo"></vds-source> <!-- Använd bara video-ID här -->
-        </vds-media>
-    </vds-player>
-
-    <script src="https://cdn.vidstack.io/v1.0.0/vidstack.min.js"></script>
+  const player = await VidstackPlayer.create({
+    target: '#target',
+    title: 'Sprite Fight',
+    src: 'youtube/_cMxraX_5RE',
+    poster: 'https://files.vidstack.io/sprite-fight/poster.webp',
+    layout: new VidstackPlayerLayout({
+      thumbnails: 'https://files.vidstack.io/sprite-fight/thumbnails.vtt',
+    }),
+  });
+</script>
+    
 </body>
 </html>
