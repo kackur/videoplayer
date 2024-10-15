@@ -8,9 +8,19 @@
 </head>
 <body>
 
-    <vds-player id="video-player" controls>
+    <h1>Videospelare med YouTube och Vimeo</h1>
+
+    <!-- YouTube Video -->
+    <vds-player id="youtube-player" controls>
         <vds-media>
-            <vds-source src="URL_TILL_DIN_VIDEO.mp4" type="video/mp4"></vds-source>
+            <vds-source src="https://www.youtube.com/watch?v=CCW9Rvypvv4" type="video/youtube"></vds-source>
+        </vds-media>
+    </vds-player>
+
+    <!-- Vimeo Video -->
+    <vds-player id="vimeo-player" controls>
+        <vds-media>
+            <vds-source src="https://vimeo.com/manage/videos/791956517" type="video/vimeo"></vds-source>
         </vds-media>
     </vds-player>
 
